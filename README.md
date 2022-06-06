@@ -13,8 +13,7 @@ A package to generate psuedo-random data for testing
 - Make sure to have `require_once path/to/src/autoload.php` (edited as needed) to the start of your PHP script(s).
 
 ### Composer
-Currently this package isn't on Composer/Packagist, though I'm working on it.
-<!-- A simple `composer require zaxn1234/random-data-generator` should do the trick! -->
+A simple `composer require zaxn1234/random-data-generator` should do the trick!
 
 ## Usage
 See `examples` folder. These will be updated alongside development.
