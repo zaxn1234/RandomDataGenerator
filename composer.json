@@ -1,0 +1,16 @@
+{
+    "name": "zaxn1234/random-data-generator",
+    "description": "A package to generate psuedo-random data for testing",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Izaak Webster",
+            "email": "izaak.webster@ntlworld.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "php": ">=8.0.0"
+    }
+}
