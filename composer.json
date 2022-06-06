@@ -12,5 +12,17 @@
     "minimum-stability": "stable",
     "require": {
         "php": ">=8.0.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "RandomDataGenerator\\": "src/RandomDataGenerator/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "RandomDataGenerator\\RandomDataGeneratorServiceProvider"
+            ]
+        }
     }
 }
