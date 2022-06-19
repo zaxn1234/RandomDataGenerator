@@ -6,13 +6,13 @@ use RandomDataGenerator\Providers\Defaults\Person as BasePerson;
 
 class Person extends BasePerson
 {
-    protected static $maleNameFormats = ['{{maleFirstName}} {{lastName}}'];
-    protected static $femaleNameFormats = ['{{femaleFirstName}} {{lastName}}'];
+    protected static array $maleNameFormats = ['{{maleFirstName}} {{lastName}}'];
+    protected static array $femaleNameFormats = ['{{femaleFirstName}} {{lastName}}'];
 
     /**
      * Roughly based on 2020 datatable at https://www.ons.gov.uk/peoplepopulationandcommunity/birthsdeathsandmarriages/livebirths/datasets/babynamesenglandandwalesbabynamesstatisticsboys
      */
-    protected static $maleFirstNames = [
+    protected static array $maleFirstNames = [
         'Aaron', 'Adam', 'Alexander', 'Archie', 'Arthur', 'Benjamin', 'Billy', 'Bobby', 'Caleb', 'Charles',
         'Charlie', 'Chester', 'Cody', 'Daniel', 'David', 'Dominic', 'Dylan', 'Edward', 'Eli', 'Elijah',
         'Elliot', 'Ellis', 'Ethan', 'Ezra', 'Felix', 'Finn', 'Frankie', 'Freddy', 'Gabriel', 'George',
@@ -30,7 +30,7 @@ class Person extends BasePerson
     /**
      * Roughly based on 2020 datatable at https://www.ons.gov.uk/peoplepopulationandcommunity/birthsdeathsandmarriages/livebirths/datasets/babynamesenglandandwalesbabynamesstatisticsgirls
      */
-    protected static $femaleFirstNames = [
+    protected static array $femaleFirstNames = [
         'Abby', 'Abigail', 'Aisha', 'Alice', 'Amber', 'Amelia', 'Amelie', 'Anna', 'Alethia', 'Aria',
         'Ava', 'Ayla', 'Bella', 'Bonnie', 'Charlotte', 'Chloe', 'Clara', 'Daisy', 'Darcy', 'Delilah',
         'Eden', 'Edith', 'Eleanor', 'Eliza', 'Elizabeth', 'Ella', 'Ellen', 'Ellie', 'Emily', 'Emma',
@@ -46,7 +46,7 @@ class Person extends BasePerson
     /**
      * Roughly based on https://forebears.io/england/surnames
      */
-    protected static $lastNames = [
+    protected static array $lastNames = [
         'Adams', 'Ahmed', 'Ali', 'Allen', 'Anderson', 'Andrews', 'Atkinson', 'Bailey', 'Baker', 'Barker',
         'Barnes', 'Bell', 'Bennett', 'Bradley', 'Brooks', 'Brown', 'Butler', 'Campbell', 'Carter', 'Chapman',
         'Clark', 'Clarke', 'Cole', 'Collins', 'Cook', 'Cooper', 'Cox', 'Davies', 'Davis', 'Day',

@@ -9,17 +9,17 @@ class Person extends BaseProvider
     const GENDER_MALE = 'Male';
     const GENDER_FEMALE = 'Female';
 
-    protected static $maleFirstNames = ['John'];
-    protected static $femaleFirstNames = ['Jane'];
-    protected static $lastNames = ['Smith'];
+    protected static array $maleFirstNames = ['John'];
+    protected static array $femaleFirstNames = ['Jane'];
+    protected static array $lastNames = ['Smith'];
 
-    protected static $firstNameFormat = ['{{maleFirstName}}', '{{femaleFirstName}}'];
-    protected static $maleNameFormats = ['{{maleFirstName}} {{lastName}}',];
-    protected static $femaleNameFormats = ['{{femaleFirstName}} {{lastName}}',];
+    protected static array $firstNameFormat = ['{{maleFirstName}}', '{{femaleFirstName}}'];
+    protected static array $maleNameFormats = ['{{maleFirstName}} {{lastName}}',];
+    protected static array $femaleNameFormats = ['{{femaleFirstName}} {{lastName}}',];
 
-    protected static $maleTitles = ['Mr.', 'Dr.', 'Prof.'];
-    protected static $femaleTitles = ['Miss.', 'Ms.', 'Mrs.', 'Dr.', 'Prof.'];
-    protected static $titleFormat = ['{{maleTitles}}', '{{femaleTitles}}'];
+    protected static array $maleTitles = ['Mr.', 'Dr.', 'Prof.'];
+    protected static array $femaleTitles = ['Miss.', 'Ms.', 'Mrs.', 'Dr.', 'Prof.'];
+    protected static array $titleFormat = ['{{maleTitles}}', '{{femaleTitles}}'];
 
     /**
      * Return a generated name (e.g. John Smith)
@@ -27,19 +27,13 @@ class Person extends BaseProvider
      * @param string $gender
      * @return string
      */
-    public function name($gender = '')
+    public function name(string $gender = ''): string
     {
-        switch (strtolower($gender)) {
-            case self::GENDER_MALE:
-                $format = static::getRandomElement(static::$maleNameFormats);
-                break;
-            case self::GENDER_FEMALE:
-                $format = static::getRandomElement(static::$femaleNameFormats);
-                break;
-            default:
-                $format = static::getRandomElement(array_merge(static::$maleNameFormats, static::$femaleNameFormats));
-                break;
-        }
+        $format = match (strtolower($gender)) {
+            self::GENDER_MALE => static::getRandomElement(static::$maleNameFormats),
+            self::GENDER_FEMALE => static::getRandomElement(static::$femaleNameFormats),
+            default => static::getRandomElement(array_merge(static::$maleNameFormats, static::$femaleNameFormats)),
+        };
 
         return $this->generator->parse($format);
     }
@@ -50,16 +44,13 @@ class Person extends BaseProvider
      * @param string $gender
      * @return string
      */
-    public function firstName(string $gender = '')
+    public function firstName(string $gender = ''): string
     {
-        switch (strtolower($gender)) {
-            case self::GENDER_MALE:
-                return static::maleFirstName();
-            case self::GENDER_FEMALE:
-                return static::femaleFirstName();
-            default:
-                return static::anyFirstName();
-        }
+        return match (strtolower($gender)) {
+            self::GENDER_MALE => static::maleFirstName(),
+            self::GENDER_FEMALE => static::femaleFirstName(),
+            default => static::anyFirstName(),
+        };
     }
 
     /**
@@ -107,16 +98,13 @@ class Person extends BaseProvider
      *
      * @param string $gender
      */
-    public function title(string $gender = '')
+    public function title(string $gender = ''): string
     {
-        switch (strtolower($gender)) {
-            case self::GENDER_MALE:
-                return static::maleTitle();
-            case self::GENDER_FEMALE:
-                return static::femaleTitle();
-            default:
-                return static::anyTitle();
-        }
+        return match (strtolower($gender)) {
+            self::GENDER_MALE => static::maleTitle(),
+            self::GENDER_FEMALE => static::femaleTitle(),
+            default => static::anyTitle(),
+        };
     }
 
     /**
