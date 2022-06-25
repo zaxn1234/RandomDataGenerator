@@ -2,7 +2,7 @@
 
 /**
  * Autoloader for PSR-0
- * 
+ *
  * Code inspired from https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-0.md#example-implementation
  */
 function autoload($className)
