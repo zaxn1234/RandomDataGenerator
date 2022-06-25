@@ -1,0 +1,16 @@
+table {
+    border: 1px solid black;
+}
+
+td, th {
+    padding: 1rem;
+}
+
+th {
+    border-bottom: 1px solid black;
+}
+
+code .comment {
+    margin-left: 4rem;
+    color: darkgreen;
+}

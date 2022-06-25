@@ -14,19 +14,7 @@ $factory = Factory::create();
   <head>
     <title>Basic Person Example</title>
 
-    <style>
-      table {
-        border: 1px solid black;
-      }
-
-      td, th {
-        padding: 1rem;
-      }
-
-      th {
-        border-bottom: 1px solid black;
-      }
-    </style>
+    <link rel="stylesheet" type="text/css" href="css/examples.css">
   </head>
   <body>
     <table>

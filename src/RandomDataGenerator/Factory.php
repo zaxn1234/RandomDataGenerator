@@ -6,7 +6,7 @@ class Factory
 {
     const DEFAULT_LOCALE = 'en_GB';
 
-    protected static $defaultProviders = ['person'];
+    protected static array $defaultProviders = ['person', 'address'];
 
     public static function create($locale = self::DEFAULT_LOCALE)
     {

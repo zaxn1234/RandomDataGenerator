@@ -4,15 +4,15 @@ namespace RandomDataGenerator;
 
 class Generator
 {
-    protected $providers = [];
-    protected $formatters = [];
+    protected array $providers = [];
+    protected array $formatters = [];
 
     /**
      * Return the providers array
      *
      * @return array
      */
-    public function getProviders()
+    public function getProviders(): array
     {
         return $this->providers;
     }
@@ -31,10 +31,10 @@ class Generator
      * Get a formatter
      *
      * @param $formatter
-     * @return string|object
+     * @return string|object|array
      * @throws \InvalidArgumentException
      */
-    public function getFormatter($formatter)
+    public function getFormatter($formatter): object|array|string
     {
         if (isset($this->formatters[$formatter]))
             return $this->formatters[$formatter];
@@ -53,8 +53,9 @@ class Generator
     /**
      * @param $formatter
      * @param array $args
+     * @return false|mixed
      */
-    public function format($formatter, $args = [])
+    public function format($formatter, array $args = []): mixed
     {
         return call_user_func_array($this->getFormatter($formatter), $args);
     }
@@ -63,16 +64,18 @@ class Generator
      * Parse a string (using PREG)
      *
      * @param string $string
+     * @return array|string|null
      */
-    public function parse(string $string)
+    public function parse(string $string): array|string|null
     {
         return preg_replace_callback('/\{\{\s?(\w+)\s?\}\}/u', [$this, 'formatWithMatches'], $string);
     }
 
     /**
      * @param array $matches
+     * @return false|mixed
      */
-    private function formatWithMatches(array $matches)
+    private function formatWithMatches(array $matches): mixed
     {
         return $this->format($matches[1]);
     }
