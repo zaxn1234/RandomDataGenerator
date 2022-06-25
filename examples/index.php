@@ -2,18 +2,26 @@
 <html>
 <head>
     <title>RandomDataGenerator Examples</title>
+
+    <link rel="stylesheet" type="text/css" href="css/examples.css">
 </head>
 <body>
-    <h1>RandomDataGenerator Examples</h1>
+    <?php require_once("includes/header.php"); ?>
 
-    <ul>
-        <li>
-          <a href="BasicPersonExample.php" title="Basic Person Example">Basic Person Example</a>
-        </li>
+    <div class="contents">
+        <h1>RandomDataGenerator Examples</h1>
 
-        <li>
-          <a href="BasicAddressExample.php" title="Basic Address Example">Basic Address Example</a>
-        </li>
-    </ul>
+        <ul>
+            <h2>Person</h2>
+            <li>
+              <a href="BasicPersonExample.php" title="Basic Person Example">Basic Person Example</a>
+            </li>
+
+            <h2>Address</h2>
+            <li>
+              <a href="BasicAddressExample.php" title="Basic Address Example">Basic Address Example</a>
+            </li>
+        </ul>
+    </div>
 </body>
 </html>

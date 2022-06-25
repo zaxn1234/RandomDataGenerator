@@ -8,6 +8,8 @@ ini_set('display_errors', 1);
 error_reporting(E_ALL);
 
 $factory = Factory::create();
+
+$back = true;
 ?>
 <!DOCTYPE>
 <html>
@@ -17,6 +19,8 @@ $factory = Factory::create();
     <link rel="stylesheet" type="text/css" href="css/examples.css">
   </head>
   <body>
+    <?php require_once("includes/header.php"); ?>
+
     <table>
       <thead>
         <th>Random First Name (Male)</th>
@@ -38,16 +42,18 @@ $factory = Factory::create();
 
     <hr>
 
-    <code>
-      require_once '../src/autoload.php'; <br>
-      use RandomDataGenerator\Factory;<br><br>
+    <div class="code">
+        <code>
+          require_once '../src/autoload.php'; <br>
+          use RandomDataGenerator\Factory;<br><br>
 
-      $factory = Factory::create();<br>
-      
-      echo $factory->maleFirstName;<br>
-      echo $factory->femaleFirstName;<br>
-      echo $factory->lastName;<br>
-      echo $factory->name;<br>
-    </code>
+          $factory = Factory::create();<br>
+
+          echo $factory->maleFirstName;<br>
+          echo $factory->femaleFirstName;<br>
+          echo $factory->lastName;<br>
+          echo $factory->name;<br>
+        </code>
+    </div>
   </body>
 </html>

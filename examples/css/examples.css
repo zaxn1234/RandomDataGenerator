@@ -1,5 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Anek+Latin:wght@400;700&display=swap');
+
+/************\
+  NAVIGATION
+\************/
+body {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+
+    font-family: 'Anek Latin', sans-serif;
+    display: block;
+}
+
+nav {
+    width: 100vw;
+    height: 5vh;
+    display: block;
+
+    background-color: blue;
+    color: white;
+    text-align: center;
+    font-size: 3rem;
+
+    margin-bottom: 1rem;
+}
+
+a.back,
+a.back:focus,
+a.back:hover,
+a.back:visited
+{
+    display: block;
+
+    cursor: pointer;
+    color: green;
+    text-decoration: none;
+    margin-left: 0.5rem;
+    margin-bottom: 2rem;
+    line-height: 1rem;
+}
+
+.contents {
+    margin: 0 auto;
+    width: 50vw;
+    border: 1px solid grey;
+    padding: 1rem;
+    text-align: center;
+}
+
+/*****************\
+   RANDOM TABLES
+\*****************/
+
 table {
+    margin: 0 auto;
+    width: 50vw;
+
     border: 1px solid black;
+    margin-bottom: 2rem;
 }
 
 td, th {
@@ -10,7 +72,12 @@ th {
     border-bottom: 1px solid black;
 }
 
+.code {
+    margin-left: 1rem;
+}
+
 code .comment {
     margin-left: 4rem;
     color: darkgreen;
 }
+
