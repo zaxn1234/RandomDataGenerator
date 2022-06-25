@@ -30,7 +30,8 @@ This library is open-sourced software licensed under the [MIT license](LICENSE.m
 Since we're early in development, this list is a vague cross-section of the things I'd like to add to this library.
 
 ### Add Providers
-- [ ] Address
+- [x] Names
+- [x] Address
 - [ ] Phone Numbers
 - [ ] Date/Time
 - [ ] Countries
@@ -41,6 +42,7 @@ Since we're early in development, this list is a vague cross-section of the thin
 - [ ] And more...
 
 ### Add Locales
+- [x] en_GB (Default locale)
 - [ ] en_US
 - [ ] de_DE
 - [ ] es_ES
@@ -49,6 +51,6 @@ Since we're early in development, this list is a vague cross-section of the thin
 - [ ] And more...
 
 ### Other Features
-- [ ] Optional Weighted Options
+- [ ] Optionally Weighted Options
 - [ ] Validation (IBAN, EAN etc.)
 - [ ] Uniqueness
